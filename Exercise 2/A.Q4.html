@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title> Calculate Age  </title>
+</head>
+<body>
+    <h1> Enter Date </h1>
+    <label for="BirthDate"> BirthDate (DD-MM):</label>
+    <input type="date" id="BirthDate">
+    <button onclick="CalculateAge()">CalculateAge</button>
+    <p id="AgeMessage"></p>
+
+    <script>
+        function CalculateAge() {
+            const BirthDate = new Date(document.getElementById('BirthDate').value);
+            const currentdate = new Date();
+            let Age = currentdate.getFullYear() - BirthDate.getFullYear();
+            document.getElementById('AgeMessage').innerText = `Your age is: ${Age}`;  
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Competition Registration</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Intercollegiate Programming Competition Registration</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Contact Number:</label>
+            <input type="text" id="contact" required>
+        </div>
+        
+        <div class="form-group">
+            <label>College Name:</label>
+            <select id="college">
+                <option value="">Select College</option>
+                <option value="MIT ACSC">MIT ACSC</option>
+                <option value="COEP">COEP</option>
+                <option value="PCCOE">PCCOE</option>
+                <option value="VIT">VIT</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Year of Study:</label><br>
+            <input type="radio" name="year" value="First Year"> First Year
+            <input type="radio" name="year" value="Second Year"> Second Year
+            <input type="radio" name="year" value="Third Year"> Third Year
+            <input type="radio" name="year" value="Final Year"> Final Year
+        </div>
+        
+        <div class="form-group">
+            <label>Programming Languages Known:</label><br>
+            <input type="checkbox" name="language" value="C"> C
+            <input type="checkbox" name="language" value="C++"> C++
+            <input type="checkbox" name="language" value="Java"> Java
+            <input type="checkbox" name="language" value="Python"> Python
+        </div>
+        
+        <div class="form-group">
+            <label>Additional Comments:</label><br>
+            <textarea id="comments" rows="4" cols="40"></textarea>
+        </div>
+        
+        <button type="submit" class="btn submit-btn">Submit</button>
+        <button type="reset" class="btn reset-btn">Reset</button>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var contact = document.getElementById("contact").value;
+        var college = document.getElementById("college").value;
+        var year = document.querySelector('input[name="year"]:checked');
+        var languages = document.querySelectorAll('input[name="language"]:checked');
+
+        if (name === "" || email === "" || contact === "" || college === "") {
+            alert("All fields are required.");
+            return false;
+        }
+
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert("Enter a valid email address.");
+            return false;
+        }
+
+        var contactPattern = /^[0-9]{10}$/;
+        if (!contactPattern.test(contact)) {
+            alert("Enter a valid 10-digit contact number.");
+            return false;
+        }
+
+        if (!year) {
+            alert("Please select your year of study.");
+            return false;
+        }
+
+        if (languages.length === 0) {
+            alert("Select at least one programming language.");
+            return false;
+        }
+
+        alert("Registration successful!");
+        return true;
+    }
+</script>
+
+</body>
+</html>

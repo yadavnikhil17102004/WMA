@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="fm" >
+
+    <img src="profile.jpg" alt="Profile Picture">
+    <h2>Employee Registration Form</h2><br>
+
+    <form action="#">
+
+        <label>Title</label>
+        <input type="radio" name="gender" id="mr" />
+        <label for="mr">Mr.</label>
+        <input type="radio" name="gender" id="mrs" />
+        <label for="mrs">Mrs.</label><br><br>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required><br><br>
+
+        <label for="mail1">Mail Address:</label>
+        <input type="email" id="mail1" required><br><br>
+
+        <label for="mail2">Mail 2:</label>
+        <input type="email" id="mail2"><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" required><br><br>
+
+        <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="Maharastra">Maharastra</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Delhi">Delhi</option>
+        </select><br><br>
+
+        <label for="zip">Zip Code:</label>
+        <input type="text" id="zip" required><br><br>
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" accept="image/*"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" required><br><br>
+
+        <label>Languages:</label><br>
+        <input type="checkbox" id="english" value="English">
+        <label for="english">English</label><br>
+        <input type="checkbox" id="hindi" value="Hindi">
+        <label for="hindi">Hindi</label><br>
+        <input type="checkbox" id="marathi" value="Marathi">
+        <label for="marathi">Marathi</label><br><br>
+
+        <label for="additionalInfo">Additional Info:</label><br>
+        <textarea id="additionalInfo" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 2px;
+            height: 100vh;
+        }
+
+        .row {
+            display: flex;
+            gap: 2px;
+        }
+
+        .row1 iframe {
+            flex: 1;
+        }
+
+        .row2 iframe,
+        .row3 iframe {
+            flex: 1;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- First Row: 1 Frame -->
+    <div class="row row1">
+        <iframe src="student_info.html"></iframe>
+    </div>
+
+    <!-- Second Row: 2 Frames -->
+    <div class="row row2">
+        <iframe src="fav_color.html"></iframe>
+        <iframe src="hobbies.html"></iframe>
+    </div>
+
+    <!-- Third Row: 3 Frames -->
+    <div class="row row3">
+        <iframe src="msg.html"></iframe>
+        <iframe src="msg2.html"></iframe>
+        <iframe src="friends.html"></iframe>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+`<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Number Checker</title>
+</head>
+<body>
+    <h2>Checking if the given number is Armstrong or not...</h2>
+    <form method="POST" action="">
+        Enter a number:
+        <input type="number" name="num" required />
+        <input type="submit" name="check" value="Check" />
+    </form>
+
+<?php
+if (isset($_POST['check'])) {
+    // Get the number from the form
+    $num = $_POST['num'];
+
+    // Ensure num is a positive integer (you can skip this check if not necessary)
+    if ($num <= 0) {
+        echo "<p>Please enter a positive number.</p>";
+    } else {
+        $sum = 0;
+        $temp = $num;
+        $digits = strlen((string)$num); // Convert number to string to ensure proper length calculation
+
+        // Armstrong number check
+        while ($temp > 0) {
+            $digit = $temp % 10;
+            $sum += pow($digit, $digits);
+            $temp = (int)($temp / 10);
+        }
+
+        // Check if the sum equals the original number
+        if ($sum == $num) {
+            echo "<p><b>$num</b> is an Armstrong number.</p>";
+        } else {
+            echo "<p><b>$num</b> is not an Armstrong number.</p>";
+        }
+    }
+}
+?>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>basic info form</title>
+	</head>
+	<body>
+		<form method="POST" action="fillinfo.php">
+    			<label for="name">Enter your name:</label>
+    			<input type="text" name="name" required><br>
+    			<label for="city">City:</label>
+    			<input type="text" name="city" required><br>
+    			<label for="os">Which Operating System have you used:</label>
+   				 <select name="os">
+        				<option value="Windows">Windows</option>
+        				<option value="Linux">Linux</option>
+        				<option value="Mac">Mac</option>
+    				</select><br>
+    			<label>Gender:</label>
+    			<input type="radio" name="gender" value="Male" required> Male
+   			<input type="radio" name="gender" value="Female" required> Female<br>
+    			<input type="submit" value="Submit">
+		</form>
+
+	</body>
+</html>

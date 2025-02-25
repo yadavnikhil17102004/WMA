@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Email Validation</title>
+            <style>
+            body {
+                display: grid;
+                place-items: center;
+                margin: 2%;
+        
+            }
+        
+            button {
+                border-radius: 2%;
+                background-color: aqua;
+                margin: 2%;
+             }
+
+        </style>
+</head>
+
+<body>
+    <h1>Email validation</h1>
+    <p>Enter a Email below :</p>
+
+    <input type="email" id="userInput" placeholder="Type your email here">
+    <button onclick="countVowels()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countVowels() {
+         
+            const inputString = document.getElementById("userInput").value;
+            var exp=/^([a-zA-Z0-9]+[._]*[a-zA-Z0-9]*@[a-zA-Z+\.[a-zA-Z])$/;
+            if (exp.test(inputString)== trueS){
+            	alert("Please Enter valid email");
+            	return true;
+            }
+            else{
+            	alert("valid email");
+            	return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
+

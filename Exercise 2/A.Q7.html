@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>String Functions</title>
+            <style>
+            body {
+                display: grid;
+                place-items: center;
+                margin: 2%;
+            }
+        
+            button {
+                border-radius: 2%;
+                background-color: aqua;
+                margin: 2%;
+             }
+
+        </style>
+</head>
+
+<body>
+    <h1>String Functions</h1>
+    <h2>Hello how are you</h2>
+    <button onclick="countVowels()">Perform</button> 
+    <p id="result"></p>
+
+
+    
+
+    <script>
+        function countVowels() {
+         
+            const inputString = "Hello how are you";
+            var result=inputString.indexOf("how")
+            var last=inputString.lastIndexOf("o")
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `The index of "how" in ${inputString}: ${result} \n The  last index of 'o' in ${inputString}: ${last}`;
+            
+            
+        }
+    </script>
+</body>
+
+</html>
+

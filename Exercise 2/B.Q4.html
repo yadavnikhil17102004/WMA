@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pan Validation</title>
+            <style>
+            body {
+                display: grid;
+                place-items: center;
+                margin: 2%;
+        
+            }
+        
+            button {
+                border-radius: 2%;
+                background-color: aqua;
+                margin: 2%;
+             }
+
+        </style>
+</head>
+
+<body>
+    <h1>Pan validation</h1>
+     <form action="#">
+        <label for="Name">First Name:</label>
+        <input type="text" id="firstName" required><br><br>
+    	
+    	 <label for="Account">Account No:</label>
+        <input type="number" id="Account" required><br><br>
+	<label for="Pan">Pan No</label>
+    	<input type="Pan" id="userInput" placeholder="Type your PAN No here">
+    	<button onclick="countVowels()">submit</button>
+
+    	
+    </form>
+
+    <script>
+        function countVowels() {
+         
+            const inputString = document.getElementById("userInput").value;
+            var exp=/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/g;
+            if (exp.test(inputString) == true){
+            	alert("Please Enter valid PAN No.");
+            	return true;
+            }
+            else{
+            	alert("valid PAN No");
+            	return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
+

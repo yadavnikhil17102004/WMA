@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>String Match</title>
+            <style>
+            body {
+                display: grid;
+                place-items: center;
+                margin: 2%;
+        
+            }
+        
+            button {
+                border-radius: 2%;
+                background-color: aqua;
+                margin: 2%;
+             }
+
+        </style>
+</head>
+
+<body>
+    <h1>String Match</h1>
+    <p>Enter a string below :</p>
+
+    <input type="text" id="userInput" placeholder="Type your string here">
+    <button onclick="countVowels()">Match</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countVowels() {
+         
+            const inputString = document.getElementById("userInput").value;
+            var exp=/^[0-9+!@#%A^&*><]/;
+            if (inputString.match(exp)){
+            	alert("YOU ENTER NUMBER OR SPECIAL CHARACTER");
+            	return true;
+            }
+            else{
+            	alert("YOU DOESN'T ENTER NUMBER OR SPECIAL CHARACTER");
+            	return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
+

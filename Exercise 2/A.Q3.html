@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title> Greeting Message </title>
+</head>
+<body>
+    <h1> Enter Date </h1>
+    <label for="dateInput"> Enter date (DD-MM):</label>
+    <input type="text" id="dateInput" placeholder="DD-MM">
+    <button onclick="checkDate()">submit</button>
+    <p id="message">Happy New Year!</p>
+
+    <script>
+        function checkDate() {
+            const userDate = document.getElementById('dateInput').value;
+
+            if (userDate == '01-01') {
+		document.getElementById('message').innerText = "Happy New Year!";               
+            } else if (userDate == '14-03') {
+		document.getElementById('message').innerText = " happu holi!";               
+            } else if (userDate == '15-08') {
+		document.getElementById('message').innerText = " happy independence day!";               
+            } else {
+		document.getElementById('message').innerText = " have a great day";               
+            }
+	}
+    </script>
+
+
+</body></html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Display Name</title>
+            <style>
+            body {
+                display: grid;
+                place-items: center;
+                margin: 2%;
+        
+            }
+        
+            button {
+                border-radius: 2%;
+                background-color: aqua;
+                margin: 2%;
+             }
+
+        </style>
+</head>
+
+<body>
+    <h1>Name Display</h1>
+    <p>Enter a Your Name :</p>
+
+    <input type="text" id="userInput" placeholder="Enter your name ">
+    <button onclick="countVowels()">Display Name</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countVowels() {
+         
+            const inputString = document.getElementById("userInput").value;
+            if (inputString){
+            	alert(`YOU Enter ${inputString}`);
+            	return true;
+            }
+            else{
+            	alert("Please Enter a name");
+            	return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
+

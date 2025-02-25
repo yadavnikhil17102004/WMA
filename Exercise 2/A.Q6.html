@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>String Replace</title>
+            <style>
+            body {
+                display: grid;
+                place-items: center;
+                margin: 2%;
+        
+            }
+        
+            button {
+                border-radius: 2%;
+                background-color: aqua;
+                margin: 2%;
+             }
+
+        </style>
+</head>
+
+<body>
+    <h1>String replace</h1>
+    <p>Enter a string below :</p>
+
+    <input type="text" id="userInput" placeholder="Type your string here">
+    <button onclick="countVowels()">Replace</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countVowels() {
+         
+            const inputString = document.getElementById("userInput").value;
+            var result=inputString.replace(/ /g,"#").replace(/\d/g,"$")
+
+      
+            /*const num = ['1','2','3','4','5','6','7','8','9','0','1'];
+            for (let char of inputString) {
+            for (let i in num )
+                if (char == i) {
+            	result=inputString.replaceAll(i,"@")
+                }
+            }*/
+
+
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `The String after replace: ${result}`;
+        }
+    </script>
+</body>
+
+</html>
+

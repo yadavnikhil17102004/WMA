@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Title</title>
+        <h1>Table Colspan</h1>
+        <style>
+        body{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        }
+        table {
+        background: Linear-gradient(#ff87ab, #fcc8c2, #f5eccd)
+        }
+        </style>
+    </head>
+    <body>
+        <table border=2px >
+            <tr>
+                <th>Seat No. of Student</th>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td rowspan="2" >1234</td>
+                <td>Advanced Web Technology</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>Operation System</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td rowspan="2" >5678</td>
+                <td>Advanced Web Technology</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Operation System</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td colspan="2" >Total Average</td>
+                <td>72.5</td>
+            </tr>
+        </table>
+    </body>
+</html>
