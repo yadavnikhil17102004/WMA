@@ -7,7 +7,7 @@ fun revnum(n: Int):Int{
         result = result * 10 + digit
         num /= 10
     }
-    return result
+    return re
 }
 fun main(){
     print("Enter a number:")

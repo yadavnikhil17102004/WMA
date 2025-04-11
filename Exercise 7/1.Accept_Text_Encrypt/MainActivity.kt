@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             val shift = shiftEditText.text.toString().toIntOrNull() ?: 0
             val encryptedText = encryptText(text, shift)
             resultTextView.text = "Encrypted: $encryptedText"
+            
         }
 
         // Set up the Decrypt button
